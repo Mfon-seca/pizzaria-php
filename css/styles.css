@@ -10,7 +10,6 @@ html{
 body {
 	margin: 0;
 }
-
 body::before{
 	content: "";
 	position: fixed;
@@ -118,7 +117,7 @@ main article button{
 }
 
 main article button:focus{
-	outline: 3px solid rgb(255, 81, 0);	
+	outline: 3px solid rgb(255, 81, 0);
 }
 
 main article:hover button{
@@ -133,10 +132,10 @@ main article:hover button{
 	#form-busca input{
 		font-size: 1.5rem;
 	}
-		
+
 	#form-busca button{
 		font-size: 1.5rem;
-	} 
+	}
 }
 
 @media (max-width:480px){
@@ -147,9 +146,9 @@ main article:hover button{
 	#form-busca input{
 		font-size: 1rem;
 	}
-		
+
 	#form-busca button{
 		font-size: 1rem;
-	} 
+	}
 
 }

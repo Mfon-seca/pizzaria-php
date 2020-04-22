@@ -1,6 +1,7 @@
-<?php 
+<?php
 	include("includes/pizzas.php");
 	include("includes/functions.php");
+	include("includes/teste.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,99 +17,16 @@
 		<input type="text" name="busca" placeholder="Qual pizza você procura?" autocomplete="off">
 		<button type="submit">Buscar</button>
 	</form>
-	
 	<main>
-		<article>
-			<img src="./img/calabresa.jpg" alt="Calabresa">
-			<button>+ Add</button>
-			<div>Calabresa</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/pepperoni.jpg" alt="Pepperoni">
-			<button>+ Add</button>
-			<div>Pepperoni</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/fracatu.jpg" alt="Fracatu">
-			<button>+ Add</button>
-			<div>Fracatu</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/marguerita.jpg" alt="Marguerita">
-			<button>+ Add</button>
-			<div>Marguerita</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/quatroqueijos.jpg" alt="Quatro Queijos">
-			<button>+ Add</button>
-			<div>Quatro Queijos</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/calabresa.jpg" alt="Calabresa">
-			<button>+ Add</button>
-			<div>Calabresa</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/pepperoni.jpg" alt="Pepperoni">
-			<button>+ Add</button>
-			<div>Pepperoni</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/fracatu.jpg" alt="Fracatu">
-			<button>+ Add</button>
-			<div>Fracatu</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/marguerita.jpg" alt="Marguerita">
-			<button>+ Add</button>
-			<div>Marguerita</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/quatroqueijos.jpg" alt="Quatro Queijos">
-			<button>+ Add</button>
-			<div>Quatro Queijos</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/calabresa.jpg" alt="Calabresa">
-			<button>+ Add</button>
-			<div>Calabresa</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/pepperoni.jpg" alt="Pepperoni">
-			<button>+ Add</button>
-			<div>Pepperoni</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/fracatu.jpg" alt="Fracatu">
-			<button>+ Add</button>
-			<div>Fracatu</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/marguerita.jpg" alt="Marguerita">
-			<button>+ Add</button>
-			<div>Marguerita</div>
-			<span>R$ 38,50</span>
-		</article>
-		<article>
-			<img src="./img/quatroqueijos.jpg" alt="Quatro Queijos">
-			<button>+ Add</button>
-			<div>Quatro Queijos</div>
-			<span>R$ 38,50</span>
-		</article>
+		<?php foreach ($pizzas as $pizza):?>
+			<article>
+				<img src="<?= $pizza["img"];?>" alt="Calabresa">
+				<button>+ Add</button>
+				<div><?= $pizza["nome"];?></div>
+				<span><?= "R$".number_format($pizza["preco"], 2, ',', '.');?></span>
+			</article>
+		<?php endforeach;?>
 	</main>
-	
+
 </body>
 </html>

@@ -1,9 +1,13 @@
-<?php 
-    /**
-     * Nessa parte você deve incluir os arquivos
-     * pizzas.php e o functions php para realizar
-     * os testes das funções desenvolvidas em
-     * functions.php
-     */
-    
+<head>
+  <style media="screen">
+  body{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+  }
+  </style>
+</head>
+<?php
+include("includes/pizzas.php");
+include("includes/functions.php");
 ?>
